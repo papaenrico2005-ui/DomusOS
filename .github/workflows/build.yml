@@ -17,6 +17,7 @@ jobs:
         with:
           name: DomusOS-Debug
           path: app/build/outputs/apk/debug/app-debug.apk
+<<<<<<< HEAD
 name: Android CI
 on: [push]
 jobs:
@@ -37,3 +38,5 @@ jobs:
           name: DomusOS-Debug
           path: app/build/outputs/apk/debug/app-debug.apk
 
+=======
+>>>>>>> 230b877b96d9ff84f4c5528fb8b70c9a9289001d
