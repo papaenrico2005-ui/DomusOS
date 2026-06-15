@@ -1,3 +1,6 @@
+git add .
+git commit -m "Descrizione della modifica fatta"
+git push
 package com.domusos.app
 
 import android.os.Bundle
