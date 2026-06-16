@@ -1,27 +1,16 @@
-git add .
-git commit -m "Descrizione della modifica fatta"
-git push
 package com.domusos.app
-
+import android.app.Activity
 import android.os.Bundle
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import com.domusos.app.presentation.ShoppingScreen
-import com.domusos.app.presentation.ShoppingUiState
+import android.webkit.WebView
+import android.webkit.WebViewClient
 
-class MainActivity : ComponentActivity() {
+class MainActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        enableEdgeToEdge()
-        super.onCreate()
-        setContent {
-            MaterialTheme {
-                Surface {
-                    ShoppingScreen(state = ShoppingUiState.Idle)
-                }
-            }
-        }
+        super.onCreate(savedInstanceState)
+        val webView = WebView(this)
+        webView.settings.javaScriptEnabled = true
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("file:///android_asset/index.html")
+        setContentView(webView)
     }
 }
